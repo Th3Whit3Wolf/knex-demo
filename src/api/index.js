@@ -6,10 +6,9 @@ const requireFiles = (directory, app, db) => {
 		if (fs.lstatSync(`${directory}/${fileName}`).isDirectory()) {
 			requireFiles(`${directory}/${fileName}`, app, db);
 		} else if (fileName === "index.js" && directory !== __dirname) {
-            require(`${directory}/${fileName}`)(app, db);
-        } else {
-            return;
-        }
+			require(`${directory}/${fileName}`)(app, db);
+		} else {
+		}
 	});
 };
 
