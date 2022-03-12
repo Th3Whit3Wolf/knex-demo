@@ -1,0 +1,27 @@
+{
+  "name": "knex-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "db": "knex --knexfile src/db/config.js",
+    "db:migrate": "knex --knexfile src/db/config.js migrate:latest",
+    "db:rollback": "knex --knexfile src/db/config.js migrate:rollback",
+    "db:seed": "knex --knexfile src/db/config.js seed:run",
+    "db:addMigration": "knex --knexfile src/db/config.js migrate:make",
+    "db:addSeed": "knex --knexfile src/db/config.js seed:make"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "knex": "^1.0.3",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
