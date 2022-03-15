@@ -5,6 +5,7 @@ const db = require("./db");
 
 app.use(express.json());
 
+
 require("./api")(app, db);
 
 function createServer() {
